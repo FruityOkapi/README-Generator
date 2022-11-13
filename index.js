@@ -3,7 +3,9 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 // This function sets template for the README file for later using template literals to be able to input the user's answers
-const generateMD = ({ username, email, projectName, description, license, install, tests, needToKnow, questions, liveLink, credits, usage }) => `
+const generateMD = ({ username, email, projectName, description, license, install, tests, needToKnow, questions, liveLink, credits, usage }) => 
+`![license](https://img.shields.io/badge/license-${license}-43deaa)
+
 # ${projectName}
 
 ## Description
@@ -17,7 +19,7 @@ ${description}
 - [License](#license)
 - [Contributing](#contributing)
 - [Testing](#testing)
-- [Contact](#contact)
+- [Questions](#questions)
 
 ## Installation
 
@@ -42,7 +44,7 @@ ${credits}
 
 ## License
 
-![license](https://img.shields.io/badge/license-${license}-43deaa)
+This application is covered under the ${license} license. Feel free to read more in the license file.
 
 ## Contributing
 
@@ -52,9 +54,9 @@ ${questions}
 
 ${tests} 
 
-## Contact
+## Questions
 
-My GitHub is ${username} and my email is ${email}`
+If you have any questions here's my [GitHub profile](https://github.com/${username}) and feel free to email me the questions directly at ${email}`
 
 // This starts the prompting of the user after they execute the starting command
 inquirer.prompt([
@@ -64,7 +66,7 @@ inquirer.prompt([
             // This sets the data type's name to be grabbed later
             name:'username',
             // This is the prompt they see in the command line. 
-            message: 'Please enter your GitHub username.',
+            message: 'Please enter your GitHub username (case sensitive).',
         },
         {
             type: 'input',

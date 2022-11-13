@@ -1,8 +1,9 @@
+![license](https://img.shields.io/badge/license-MIT-43deaa)
 
 # README Generator
 
 ## Description
-It uses inquirer and node.js to generate a README file based on user input
+This application allows users to quickly make a professional README without too much effort.
 
 ## Table of Contents
 
@@ -12,19 +13,19 @@ It uses inquirer and node.js to generate a README file based on user input
 - [License](#license)
 - [Contributing](#contributing)
 - [Testing](#testing)
-- [Contact](#contact)
+- [Questions](#questions)
 
 ## Installation
 
-You don't
+You do not need to install any dependencies.
 
 ## Usage
 
-Open your command line to the file location of index.js and run it using the command "node index.js"
+To use the application, open up your command line to the file location of index.js and run the command "node index.js" Follow the prompts and it will finish the file for you.
 
-LINK.LINK/video.mp4
+LINK
 
-Here is a link to the live site: LINK.LINK
+Here is a link to the live site: https://fruityokapi.github.io/README-Generator
 
 <!-- Here is a slot to put in screenshots -->
 
@@ -34,20 +35,20 @@ Here is a link to the live site: LINK.LINK
 ## Credits 
 
 Inquirer: https://www.npmjs.com/package/inquirer
-Badges: https://shields.io
+Shields: https://shields.io
 
 ## License
 
-![license](https://img.shields.io/badge/license-MIT-43deaa)
+This application is covered under the MIT license. Feel free to read more in the license file.
 
 ## Contributing
 
-Please open a pull request if you wish to add to the repo. Forks are also welcome.
+If you wish to contribute please make a pull request with detailed descriptions fo the addition and I will look into adding it.
 
 ## Testing
 
-I dont have any atm 
+There is no current test command. 
 
-## Contact
+## Questions
 
-My GitHub is FruityOkapi and my email is josephbsimmerman@gmail.com
+If you have any questions here's my [GitHub profile](https://github.com/FruityOkapi) and feel free to email me the questions directly at josephbsimmerman@gmail.com
