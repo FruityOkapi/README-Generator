@@ -25,7 +25,7 @@ To use the application, open up your command line to the file location of index.
 
 LINK
 
-Here is a link to the live site: https://fruityokapi.github.io/README-Generator
+Here is a link to the live site if applicable: N/A
 
 <!-- Here is a slot to put in screenshots -->
 
