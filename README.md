@@ -33,7 +33,8 @@ Here is a link to the live site: LINK.LINK
 
 ## Credits 
 
-Inquirer: https://www.npmjs.com/package/inquirer\n Badges: https://shields.io
+Inquirer: https://www.npmjs.com/package/inquirer
+Badges: https://shields.io
 
 ## License
 
