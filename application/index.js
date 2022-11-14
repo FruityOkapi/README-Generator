@@ -4,7 +4,7 @@ const fs = require('fs');
 
 // This function sets template for the README file for later using template literals to be able to input the user's answers
 const generateMD = ({ username, email, projectName, description, license, install, tests, needToKnow, questions, liveLink, credits, usage }) => 
-`![license](https://img.shields.io/badge/license-${license}-43deaa)
+`![license](https://img.shields.io/static/v1?label=license&message=${license}&color=blueviolet)
 
 # ${projectName}
 
@@ -89,7 +89,10 @@ inquirer.prompt([
             name:'license',
             message: "Please select the project's license type.",
             // This is the array that holds all the choices that the user gets for the prompt
-            choices: ['MIT', 'GPL 3.0', 'BSD 3', 'None']
+            choices: ['MIT', 'GPL 3.0', 'BSD 3', 'None'],
+            filter(val) {
+                return val.split(' ').join('%20');
+            },
         },
         {
             type: 'input',
