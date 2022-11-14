@@ -1,62 +1,7 @@
 // These objects pull fs and inquirer dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
-
-// This function sets template for the README file for later using template literals to be able to input the user's answers
-const generateMD = ({ username, email, projectName, description, license, install, tests, needToKnow, questions, liveLink, credits, usage }) => 
-`![license](https://img.shields.io/static/v1?label=license&message=${license}&color=blueviolet)
-
-# ${projectName}
-
-## Description
-${description}
-
-## Table of Contents
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-- [Contributing](#contributing)
-- [Testing](#testing)
-- [Questions](#questions)
-
-## Installation
-
-${install}
-
-## Usage
-
-${needToKnow}
-
-${usage}
-
-Here is a link to the live site: ${liveLink}
-
-<!-- Here is a slot to put in screenshots -->
-
-
-
-
-## Credits 
-
-${credits}
-
-## License
-
-This application is covered under the ${license} license. Feel free to read more in the license file.
-
-## Contributing
-
-${questions}
-
-## Testing
-
-${tests} 
-
-## Questions
-
-If you have any questions here's my [GitHub profile](https://github.com/${username}) and feel free to email me the questions directly at ${email}`
+const generateHTML = require('./generateHTML');
 
 // This starts the prompting of the user after they execute the starting command
 inquirer.prompt([
@@ -90,9 +35,6 @@ inquirer.prompt([
             message: "Please select the project's license type.",
             // This is the array that holds all the choices that the user gets for the prompt
             choices: ['MIT', 'GPL 3.0', 'BSD 3', 'None'],
-            filter(val) {
-                return val.split(' ').join('%20');
-            },
         },
         {
             type: 'input',
@@ -134,7 +76,7 @@ inquirer.prompt([
     // This then (haha) executes a arrow function that creates the file
     .then((userInput) => {
         // This object then sets the previous function, generateMD, to have the data from the prompts above
-        const mdContent = generateMD(userInput);
+        const mdContent = generateHTML.generateMD(userInput);
         // This function then uses fs to make a file with the syntax of ("file name", "content of file", "error function")
         fs.writeFile('README.md', mdContent, (error) =>
             // The below line is a short hand if else statement. "if error is true then console log the error; if false then console log success message"
