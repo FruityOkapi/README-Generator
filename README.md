@@ -23,7 +23,7 @@ You do not need to install any dependencies.
 
 To use the application, open up your command line to the file location of index.js and run the command "node index.js" Follow the prompts and it will finish the file for you.
 
-LINK
+Here is the walkthrough: [Video](https://drive.google.com/file/d/1r0xG8WGwcY8wA9s0xlMw5oExqSi5IWrv/view?usp=share_link)
 
 Here is a link to the live site if applicable: N/A
 
