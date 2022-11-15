@@ -1,7 +1,7 @@
 // These objects pull fs and inquirer dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
-const generateHTML = require('./generateHTML');
+const generateHTML = require('./assets/utils/generateHTML');
 
 // This starts the prompting of the user after they execute the starting command
 inquirer.prompt([

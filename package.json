@@ -1,7 +1,7 @@
 {
   "name": "challenge-07",
   "version": "1.0.0",
-  "description": "",
+  "description": "![license](https://img.shields.io/badge/license-MIT-43deaa)",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
